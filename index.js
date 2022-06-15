@@ -8,7 +8,7 @@ var reData = [
 function makeDropDown(data, resourceFilter) {
   const filteredArray = data.filter((r) => r[0] === resourceFilter);
 
-  const uniqueOptions = newSet();
+  const uniqueOptions = new Set();
 
   filteredArray.forEach((r) => uniqueOptions.add(r[1]));
 
