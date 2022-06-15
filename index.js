@@ -5,6 +5,6 @@ var reData = [
   ["Resource2", "Error4"],
 ];
 
-const filteredArray = data.filter((r) => r[0] === "Resource1");
+const filteredArray = reData.filter((r) => r[0] === "Resource1");
 
 console.log(filteredArray);
