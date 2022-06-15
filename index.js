@@ -1,10 +1,15 @@
 var reData = [
+  ["--Select Resource Type--", "--Select Error Type--"],
+  ["Resource1", "--Select Error Type--"],
   ["Resource1", "Error1 for Resource1"],
   ["Resource1", "Error2 for Resource1"],
   ["Resource1", "Error3 for Resource1"],
+  ["Resource2", "--Select Error Type--"],
   ["Resource2", "Error1 for Resource2"],
   ["Resource2", "Error2 for Resource2"],
 ];
+
+var pData = [["--Select Priority Level--"], ["High"], ["Medium"], ["Low"]];
 
 function makeDropDown(data, resourceFilter) {
   const filteredArray = data.filter((r) => r[0] === resourceFilter);
@@ -21,6 +26,7 @@ function applyDropDown() {
 function afterDocumentLoads() {
   popResourceDropDown();
   applyDropDown();
+  popPriorityDropDown();
 }
 
 function getUniqueValues(data, index) {
@@ -32,6 +38,12 @@ function getUniqueValues(data, index) {
 function popResourceDropDown() {
   const uniqueList = getUniqueValues(reData, 0);
   const el = document.getElementById("resource");
+  popDropDown(el, uniqueList);
+}
+
+function popPriorityDropDown() {
+  const uniqueList = getUniqueValues(pData, 0);
+  const el = document.getElementById("priority");
   popDropDown(el, uniqueList);
 }
 
