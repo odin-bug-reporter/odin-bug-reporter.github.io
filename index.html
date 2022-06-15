@@ -6,8 +6,19 @@
     <script src="index.js"></script>
   </head>
   <body>
-    <form>
-      <input type="button" value="Say Hello" onclick="display()" />
+    <h1>Odin Bug Reporter</h1>
+    <form name="form1" id="form1" action="/action_page.php">
+      Resource:
+      <select name="resource" id="resource">
+        <option value="" selected="selected">Select resource</option>
+      </select>
+      <br /><br />
+      Issue:
+      <select name="error" id="error">
+        <option value="" selected="selected">Please select issue first</option>
+      </select>
+      <br /><br />
+      <input type="submit" value="Submit" />
     </form>
   </body>
 </html>
