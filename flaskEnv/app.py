@@ -2,26 +2,7 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-courses = [
-    {
-        "name": "name",
-        "course_id": "0",
-        "Description": "Description is longer",
-        "price": "money money",
-    },
-    {
-        "name": "name1",
-        "course_id": "1",
-        "Description": "Description1 is longer",
-        "price": "money1 money",
-    },
-    {
-        "name": "name2",
-        "course_id": "2",
-        "Description": "Description2 is longer",
-        "price": "money2 money",
-    },
-]
+
 
 
 @app.route("/")
